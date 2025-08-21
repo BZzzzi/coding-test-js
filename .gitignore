@@ -1,0 +1,5 @@
+# IDE 설정
+.idea/
+
+# macOS Finder 설정 파일
+.DS_Store
