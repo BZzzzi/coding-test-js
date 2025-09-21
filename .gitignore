@@ -3,3 +3,5 @@
 
 # macOS Finder 설정 파일
 .DS_Store
+
+node_modules
