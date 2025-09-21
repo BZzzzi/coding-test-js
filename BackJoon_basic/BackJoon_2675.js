@@ -1,18 +1,17 @@
-let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+let fs = require("fs");
+let input = fs.readFileSync("./input.txt").toString().split("\n");
 
-let count = input[0];
-let numbers = [];
+let T = Number(input[0]);
 
-for (let i = 1; i < input.length; i++) {
-    if (input[i] !== '') {
-        numbers.push(input[i].split(' '));
-    }
-}
+for (let i = 1; i <= T; i++) {
+  // 구조분해할당, 공백을 기준으로 R, S에 각각 할당
+  const [R, S] = input[i].split(" ");
+  let result = "";
 
-for (let i = 0; i < numbers.length; i++){
-    let num1 = Number(numbers[i][0]);
-    let num2 = Number(numbers[i][1]);
+  for (let char of S) {
+    // R 만큼 반복해서 result에 글자를 더해라
+    result += char.repeat(Number(R));
+  }
 
-    console.log(num1 + num2);
+  console.log(result);
 }
